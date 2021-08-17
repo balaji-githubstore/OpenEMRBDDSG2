@@ -11,6 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		,monochrome = true
 	    ,publish = true
 	    ,plugin = {"html:target/index.html"}
+		,dryRun = true
 		)
 
 @RunWith(Cucumber.class)

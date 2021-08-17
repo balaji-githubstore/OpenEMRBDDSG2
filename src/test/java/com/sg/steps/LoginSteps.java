@@ -6,7 +6,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -48,7 +50,21 @@ public class LoginSteps {
 		String actualValue=driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
 		Assert.assertEquals(expectedValue,actualValue);
 	}
+	
+	@Then("I should access to the portal with title as {string}")
+	public void i_should_access_to_the_portal_with_title_as(String expectedTitle) {
+	   
+		WebDriverWait wait = new WebDriverWait(driver, 50);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Flow Board']")));
+		
+		Assert.assertEquals(expectedTitle, driver.getTitle());
+	}
+
 }
+
+
+
+
 
 
 

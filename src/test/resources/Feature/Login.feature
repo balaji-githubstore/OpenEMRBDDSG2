@@ -12,7 +12,13 @@ And I select language as "English (Indian)"
 And I click on login
 Then I should get the error message as "Invalid username or password"
 
-
+Scenario: Valid Credential
+Given I have browser with openemr page
+When I enter username as "admin"
+And I enter password as "pass"
+And I select language as "English (Indian)"
+And I click on login
+Then I should access to the portal with title as "OpenEMR"
 
 
 
