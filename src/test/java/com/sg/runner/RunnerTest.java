@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(		
-		features = {"src/test/resources/Feature"}		
+		features = {"src/test/resources/Feature/Login.feature"}		
 		,glue = {"com.sg.steps"}
 		,monochrome = true
 	    ,publish = true
