@@ -13,7 +13,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverWrapper {
 	public static WebDriver driver;
-
 	public static void launchBrowser(String browser) {
 
 		if (browser.equalsIgnoreCase("ie")) {
