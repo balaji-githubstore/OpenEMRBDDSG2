@@ -12,26 +12,26 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.sg.base.WebDriverWrapper;
+import com.sg.pages.DashboardPage;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class PatientSteps {	
 	//setup webdriverwrapper driver details to use in the class
-	private static WebDriver driver=WebDriverWrapper.driver;
+	private WebDriver driver=WebDriverWrapper.driver;
 	
 	private static String actualAlert;
 	
 	@When("I mouseover on patient-client")
 	public void i_mouseover_on_patient_client() {
 	    
-		Actions action=new Actions(driver);
-		action.moveToElement(driver.findElement(By.xpath("//div[text()='Patient/Client']"))).perform();
+		DashboardPage.mouseOverOnPatientClient();
 	    
 	}
 	@When("I click on patients")
 	public void i_click_on_patients() {
-	    driver.findElement(By.xpath("//div[text()='Patients']")).click();
+	    DashboardPage.clickOnPatients();
 	    
 	}
 	@When("I click on add new patients")
@@ -60,6 +60,7 @@ public class PatientSteps {
 		 Select select=new Select(driver.findElement(By.id("form_sex")));
 		 select.selectByVisibleText(ls.get(0).get("gender"));
 		 
+		 driver.findElement(By.id("form_pubpid")).sendKeys(ls.get(0).get("externalid"));
 		 
 	}
 	@When("I click on create new patient")
