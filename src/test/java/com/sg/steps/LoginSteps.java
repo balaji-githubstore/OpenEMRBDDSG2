@@ -10,14 +10,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class LoginSteps {
 	private WebDriver driver;
+	
+	@After
+	public void tearDown()
+	{
+		driver.quit();
+	}
 	
 	@Given("I have browser with openemr page")
 	public void i_have_browser_with_openemr_page() {	
