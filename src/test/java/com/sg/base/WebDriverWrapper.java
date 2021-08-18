@@ -12,7 +12,6 @@ import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverWrapper {
-
 	public static WebDriver driver;
 
 	public static void launchBrowser(String browser) {
