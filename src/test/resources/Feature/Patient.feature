@@ -1,3 +1,4 @@
+@patient
 Feature: Patient
   In order to maintain the patient records
   As a admin
@@ -21,3 +22,13 @@ Feature: Patient
     And I close the happy birthday popup
     Then I should get the alert message as "Assessment: Tobacco"
     And I should get the added patient detail as "Medical Record Dashboard - John Paul"
+
+    
+    
+    
+    
+    
+    
+    
+    
+    

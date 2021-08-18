@@ -15,12 +15,6 @@ import io.cucumber.java.en.When;
 
 public class LoginSteps {
 	
-	@After
-	public void tearDown()
-	{
-		WebDriverWrapper.driver.quit();
-	}
-	
 	@Given("I have browser with openemr page")
 	public void i_have_browser_with_openemr_page() {	
 		WebDriverWrapper.launchBrowser();

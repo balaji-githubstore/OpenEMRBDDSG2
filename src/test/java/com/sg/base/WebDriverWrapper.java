@@ -5,12 +5,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
+import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverWrapper {
 	
 	public static WebDriver driver;
-	
 	
 	public static void launchBrowser()
 	{
@@ -21,5 +22,10 @@ public class WebDriverWrapper {
 		driver.get("http://demo.openemr.io/b/openemr");
 	}
 	
+	@After
+	public void tearDown()
+	{
+		WebDriverWrapper.driver.quit();
+	}
 
 }
