@@ -26,4 +26,4 @@ Feature: Patient
     Examples: 
       | browser | username | password | language         | firstname | lastname | dob        | gender | externalid | expectedalert       | expectedpatientname                   |
       | ff      | admin    | pass     | English (Indian) | John      | Paul     | 2021-08-18 | Male   |        123 | Assessment: Tobacco | Medical Record Dashboard - John Paul  |
-      | ch      | admin    | pass     | English (Indian) | Peter     | Hein     | 2021-08-15 | Male   |        245 | Assessment: Tobacco | Medical Record Dashboard - Peter Hein |
+      | ff      | admin    | pass     | English (Indian) | Peter     | Hein     | 2021-08-15 | Male   |        245 | Assessment: Tobacco | Medical Record Dashboard - Peter Hein |

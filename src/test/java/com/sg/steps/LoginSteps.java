@@ -25,7 +25,7 @@ public class LoginSteps {
 
 	@Given("I have browser with openemr page")
 	public void i_have_browser_with_openemr_page() {
-		WebDriverWrapper.launchBrowser("ch");
+		WebDriverWrapper.launchBrowser("ff");
 		WebDriverWrapper.scenario.log("browser launched - chrome");
 	}
 
