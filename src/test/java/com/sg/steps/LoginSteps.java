@@ -14,22 +14,25 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+//b1
 public class LoginSteps {
 
 	@Given("I have {string} browser with openemr page")
 	public void i_have_browser_with_openemr_page(String browser) {
 		WebDriverWrapper.launchBrowser(browser);
+		WebDriverWrapper.scenario.log("browser launched "+browser);
 	}
 
 	@Given("I have browser with openemr page")
 	public void i_have_browser_with_openemr_page() {
 		WebDriverWrapper.launchBrowser("ch");
+		WebDriverWrapper.scenario.log("browser launched - chrome");
 	}
 
 	@When("I enter username as {string}")
 	public void i_enter_username_as(String username) {
 		LoginPage.enterUsername(username);
+		WebDriverWrapper.scenario.log("username entered "+username);
 	}
 
 	@When("I enter password as {string}")
@@ -44,7 +47,7 @@ public class LoginSteps {
 
 	@When("I click on login")
 	public void i_click_on_login() {
-		LoginPage.clickOnAckLicAndCertifi();
+		LoginPage.clickOnLogin();
 	}
 
 	@Then("I should get the error message as {string}")

@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 		,glue = {"com.sg.steps","com.sg.base"}
 		,monochrome = true
 	    ,publish = false
-	    ,plugin = {"html:target/index.html"}
+	    ,plugin = {"html:target/index.html","json:target/cucumber-report.json"}
 //		,dryRun = true
-		,tags = "@patient" //and or not // not @invalid or @valid
+		,tags = "@invalid" //and or not // not @invalid or @valid
 		)
 
 @RunWith(Cucumber.class)
